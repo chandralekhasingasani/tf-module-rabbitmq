@@ -31,6 +31,9 @@ resource "aws_instance" "instance" {
 }
 
 resource "null_resource" "connect" {
+  triggers = {
+    ABC = timestamp()
+  }
   count = length(local.ALL_INSTANCE_IDS)
   provisioner "remote-exec" {
     connection {
