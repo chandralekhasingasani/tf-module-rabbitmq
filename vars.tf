@@ -7,7 +7,6 @@ variable "CIDR_BLOCK" {}
 variable "WORKSTATION_IP" {}
 variable "INSTANCE_COUNT" {}
 variable "SUBNET_IDS" {}
-variable "IAM_INSTANCE_PROFILE" {}
 variable "PORT" {}
 variable "DBTYPE" {
   default = "null"
