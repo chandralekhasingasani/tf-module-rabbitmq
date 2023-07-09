@@ -3,5 +3,5 @@ resource "aws_route53_record" "component" {
   name    = "${var.COMPONENT}-${var.ENV}"
   type    = "CNAME"
   ttl     = 300
-  records = [aws_lb.test.dns_name]
+  records = [aws_spot_instance_request.spot.private_ip]
 }
